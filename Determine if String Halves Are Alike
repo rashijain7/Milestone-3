@@ -1,0 +1,20 @@
+class Solution:
+    def halvesAreAlike(self, s: str) -> bool:
+        stringer = "aeiou"
+        counter1 = counter2 = 0
+        length = len(s) / 2
+        str1 = s[:int(length)].lower()
+        str2 = s[int(length):].lower()
+
+        for letter in str1:
+            if letter in stringer:
+                counter1 += 1
+
+        for letter in str2:
+            if letter in stringer:
+                counter2 += 1
+
+        if counter1 == counter2:
+            return True
+        else:
+            return False
