@@ -1,0 +1,7 @@
+class Solution:
+    def truncateSentence(self, s: str, k: int) -> str:
+        array = s.split(' ')
+        array = array[:k]
+        result = ' '.join(array)
+        
+        return result
